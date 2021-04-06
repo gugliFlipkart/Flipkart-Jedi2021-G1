@@ -368,3 +368,16 @@ Enter code
 13:52:26,067  INFO CRSApplication,main:38 - 2 - Student Registration
 13:52:26,067  INFO CRSApplication,main:39 - 3 - Update password
 13:52:26,067  INFO CRSApplication,main:40 - 9 - Exit
+16:38:06,114  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+16:38:06,119  INFO CRSApplication,main:36 - =========Enter action code as below=========
+16:38:06,119  INFO CRSApplication,main:37 - 1 - Login
+16:38:06,119  INFO CRSApplication,main:38 - 2 - Student Registration
+16:38:06,120  INFO CRSApplication,main:39 - 3 - Update password
+16:38:06,120  INFO CRSApplication,main:40 - 9 - Exit
+16:40:02,170  INFO CRSApplication,main:52 - logging out
+16:40:17,736  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+16:40:17,740  INFO CRSApplication,main:36 - =========Enter action code as below=========
+16:40:17,740  INFO CRSApplication,main:37 - 1 - Login
+16:40:17,740  INFO CRSApplication,main:38 - 2 - Student Registration
+16:40:17,740  INFO CRSApplication,main:39 - 3 - Update password
+16:40:17,740  INFO CRSApplication,main:40 - 9 - Exit
