@@ -56,6 +56,14 @@ public class StudentHandler {
 //        return null;
     }
 
+    public void studentRegistration(String studentId, String password){
+
+        studentServiceInterface.studentRegistration(studentId, password);
+
+
+    }
+
+
 
 
 }

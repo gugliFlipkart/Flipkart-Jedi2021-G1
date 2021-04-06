@@ -144,5 +144,10 @@ public class StudentMenu {
 
     }
 
+    public void studentRegistration(String userId, String password){
+
+
+    }
+
 
 }
