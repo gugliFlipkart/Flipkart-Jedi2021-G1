@@ -7,6 +7,7 @@ import com.flipkart.exception.CourseAlreadyRegisteredException;
 import com.flipkart.exception.CourseCapacityReached;
 import com.flipkart.exception.CourseNotFoundException;
 import com.flipkart.exception.RequiredCourseAdditionException;
+import com.flipkart.handler.PaymentHandler;
 import com.flipkart.handler.ProfessorHandler;
 import com.flipkart.handler.StudentHandler;
 import com.flipkart.service.ProfessorService;
@@ -55,13 +56,9 @@ public class StudentMenu {
 //                    break;
 
                 case 2: // pay fee
-                    // check for succefull registration of courses
-//                    boolean courseRegistrationStatus = studentHandler.registerCourses(student).fst;
-//
-//                    if (courseRegistrationStatus)
-//                        paymentMode(student);
-//                    else
-//                        System.out.println("u have not com[leted course registration! Duffer !");
+
+                    PaymentHandler paymentHandler = new PaymentHandler();
+                    paymentHandler.make_payment(studentId);
 
                     break;
 
