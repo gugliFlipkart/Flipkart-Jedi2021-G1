@@ -9,40 +9,33 @@ import org.apache.log4j.Logger;
 import java.util.List;
 import java.util.Scanner;
 
-public class ProfessorMenu {
+public class AdminMenu {
 
     private static Logger logger = Logger.getLogger(ProfessorMenu.class);
-    // Prof chosses what operation he wants to perform
-    // 1.
-    // 2.
-    // 3.
-
-
-    // crsapp -> menu ->handler-> service ->dao -> db
 
     Scanner scanner = new Scanner(System.in);
     ProfessorHandler professorHandler = new ProfessorHandler();
 
     ProfessorService professorService = new ProfessorService();
 
+
     /**
-     * Method to view professor dashboard
-     * @param professorId
+     *
      */
 
-    public void enterProfessorDashboard(String professorId){
+    public void enterAdminDashboard(String professorId) {
 
 
         int flag = 0;
         while (true) {
             logger.info("--------------Successfully logged in---------------");
-            logger.info("===================Welcome to Professor menu=================");
-            logger.info("1. Add Course to teach \n 2. View Enrolled Students \n 3. Add grades --> 3 \n 9. Exit");
+            logger.info("===================Welcome to Admin Menu=================");
+            logger.info("1. View pending Approval Requests \n 2. Approve Student Registration \n 3. Add Course in Course Catalogue \n 4. Generate Student Report card \n  9. Exit");
 
             switch (scanner.nextInt()) {
                 case 1: // add couses to teach
-                    logger.info("-----You're redirected to page where you can add Courses to teach!-----");
-                    logger.info("Enter courseId you would like to teach :");
+                    logger.info("-----You're redirected to page where you can add view pending approval requests-----");
+
                     String courseId = scanner.next();
                     professorHandler.addCoursesToTeach(professorId,courseId);
 
@@ -82,14 +75,7 @@ public class ProfessorMenu {
             }
         }
 
-
-
     }
-
-
-
-
-
 
 
 
