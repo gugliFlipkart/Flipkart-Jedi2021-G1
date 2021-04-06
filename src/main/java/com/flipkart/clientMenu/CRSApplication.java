@@ -31,13 +31,13 @@ public class CRSApplication {
 
     public static void welcomeScreen(){
 
-        logger.info("----------Welcome to Course Management System---------");
-
-        logger.info("=========Enter action code as below=========");
-        logger.info("1 - Login");
-        logger.info("2 - Student Registration");
-        logger.info("3 - Update password");
-        logger.info("9 - Exit");
+        logger.info(" --------------Welcome to Course Management System---------");
+        logger.info("============Enter action code as below==============");
+        logger.info("Enter 1 to Login");
+        logger.info("Enter 2 to Student Registration");
+        logger.info("Enter 3 to Update password");
+        logger.info("Enter 9 to Logout");
+        logger.info("Enter user input");
 
         int userAction = scanner.nextInt();
 
@@ -57,15 +57,18 @@ public class CRSApplication {
 
     }
 
+    /**
+     *  Method for login
+     */
 
     public static void login() {
 
         String userId;
         String password;
-        System.out.println("Enter UserId");
+        logger.info("Enter UserId");
         scanner.nextLine();
         userId = scanner.nextLine();
-        System.out.println("Enter Password");
+        logger.info("Enter Password");
         password = scanner.nextLine();
 
 
@@ -99,7 +102,7 @@ public class CRSApplication {
 
 
             } else {
-                System.out.println("invalid======");
+               logger.info("invalid======");
             }
 
 
