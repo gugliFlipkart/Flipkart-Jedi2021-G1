@@ -29,18 +29,33 @@ public class ProfessorMenu {
 
         int flag = 0;
         while (true) {
-            System.out.println("We are in prof Menu\n Enter \n add couses to teach --> 1\n view Enrolledstudent--> 2\n add grades --> 3 \n exit -- 9");
+
+            logger.info(" ");
+            logger.info("*********************************    Successfully logged in      *********************************");
+            logger.info(" ");
+            logger.info("--------------------------------------------------------------------------------------------------");
+            logger.info("===================================  Welcome to Professor Menu    ===============================");
+            logger.info("----------------------------------------------------------------------------------------------------");
+            logger.info("     ");
+            logger.info("Enter your choice: ");
+            logger.info("   ");
+            logger.info("1. Add Course to teach \n 2. View Enrolled Students \n 3. Add grades  \n 9. Exit");
 
             switch (scanner.nextInt()) {
-                case 1: // add couses to teach
-                    System.out.println("Enter courseId you would like to teach ");
-                    String courseId = scanner.next();
-                    professorHandler.addCoursesToTeach(professorId,courseId);
+                case 1: // add courses to teach
+                    logger.info("-----You're redirected to page where you can add Courses to teach!-----");
+                    logger.info("        ");
+                    logger.info("Enter courseId you would like to teach :");
 
-                    break;
+                case 2:  //view student list
+                    logger.info("-----You're redirected to page where you can view list of Enrolled students!-----");
+                    logger.info(" ");
+                    logger.info("Enter Course ID to see enrolled Student");
+
                 case 2:  //view student
 
                     System.out.println("Enter Course ID to see enrolled Student");
+
                     String courseIdd = scanner.next();
                     List<Student> courseStudentList = professorHandler.ViewStudents(courseIdd);
 
@@ -50,6 +65,9 @@ public class ProfessorMenu {
 
                     break;
                 case 3: // add grades
+
+                    logger.info("-----You're redirected to page where you can add grades!-----");
+                    logger.info("   ");
 
                     Grade grade = new Grade();
                     System.out.println("enter courseid");
@@ -68,7 +86,9 @@ public class ProfessorMenu {
             }
 
             if(flag == 1) {
-                System.out.println("Logging Out !!");
+
+                System.out.println("******  Logged Out!  ******");
+
                 break;
             }
         }

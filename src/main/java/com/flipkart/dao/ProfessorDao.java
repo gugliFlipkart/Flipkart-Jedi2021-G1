@@ -46,7 +46,7 @@ public class ProfessorDao implements ProfessorDaoInterface{
 
 
     /**
-     *
+     * Method used to add courses to teach by professor
      * @param professorId
      * @param courseId
      */
@@ -111,7 +111,7 @@ public class ProfessorDao implements ProfessorDaoInterface{
 
 
     /**
-     *
+     * Method to fetch enrolled students' list for professor
      * @param courseId
      * @return
      */
@@ -154,7 +154,10 @@ public class ProfessorDao implements ProfessorDaoInterface{
 
     }
 
-
+    /**
+     * Method used to add grades by professor
+     * @param grade
+     */
 
     public void addGrades(Grade grade){
 
@@ -166,7 +169,7 @@ public class ProfessorDao implements ProfessorDaoInterface{
             stmt.setString(2, grade.getCourseId());
             stmt.setString(3, grade.getStudentId());
 
-            System.out.println(stmt.executeUpdate());
+            logger.info(stmt.executeUpdate());
 
 
         } catch (SQLException throwables) {

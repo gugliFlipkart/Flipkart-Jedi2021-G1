@@ -1,11 +1,16 @@
 package com.flipkart.constant;
 
+
+/**
+ * This class contains all the SQL queries used
+ */
 public class SqlQueries {
 
     // Admin
     public static final String DELETE_COURSE_QUERY = "delete from course where courseId = ?";
     public static final String ADD_COURSE_QUERY = "insert into course(courseId, profId, courseName, courseFee) values (?, ?, ?, ?)";
-    public static final String APPROVE_STUDENT_QUERY = "update userCredentials set approvalStatus = 1 where userId = ?";
+    public static final String APPROVE_STUDENT_QUERY = "update userCredentials set approvalStatus = 1 where approvalStatus = 0";
+    public static final String CHECK_IF_COURSE_EXISTS = "select count(*) from course where courseId = ?";
 
 
     // student

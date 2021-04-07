@@ -25,6 +25,14 @@ public final class AuthenticationDao implements AuthenticationDaoInterface {
         return instance;
     }
 
+    /**
+     * Method to validate given user's credentials
+     * @param userId
+     * @param password
+     * @return
+     */
+
+
     public String validateCredentials(String userId, String password){
         Connection conn = null;
         conn = DBUtils.getConnection();
@@ -34,7 +42,6 @@ public final class AuthenticationDao implements AuthenticationDaoInterface {
 
         try {
             System.out.println("Creating statement...");
-//            String sql= "SELECT * FROM userCredentials where userId = ? ";
 
             stmt = conn.prepareStatement(SqlQueries.AUTHENTICATE_CREDS);
             stmt.setString(1,userId);
@@ -48,28 +55,18 @@ public final class AuthenticationDao implements AuthenticationDaoInterface {
                 return userTypeDb;
 
 
-                //Display values
-//                System.out.print(", userType: " + userType1);
-//                System.out.print(", userId1: " + userId1);
-//                System.out.println(", Last: " + location1);
 
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        //dummy student object
-//        Student student = new Student("virat","Cse",7,2021,"s");
-//        student.setUserType("STUDENT");
-//        return student;
+
         return  null;
     }
 
 
-//    public static void main(String[] args) {
-//        validateCredentials("S101","sss");
-//        System.out.println("=============");
-//    }
+
 
 
 }
