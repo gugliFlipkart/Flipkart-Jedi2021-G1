@@ -21,6 +21,7 @@ public class SqlQueries {
     public static final String INSERT_PAYMENT = "insert into payment(studentId,modeofPayment,amt) values(?,?,?);";
     public static final String INSERT_NOTIFICATION = "insert into notification(transactionId,studentId,message,amount) values(?,?,?,?);";
     //fetch Course added
+    public static final String REGISTER_STUDENT = "insert into userCredentials values (?,?,?,?)";
 
 
 

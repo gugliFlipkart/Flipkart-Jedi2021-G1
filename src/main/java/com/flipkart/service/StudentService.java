@@ -9,6 +9,7 @@ import com.flipkart.exception.CourseAlreadyRegisteredException;
 import com.flipkart.exception.CourseCapacityReached;
 import com.flipkart.exception.CourseNotFoundException;
 import com.flipkart.exception.RequiredCourseAdditionException;
+import com.flipkart.handler.StudentHandler;
 import com.sun.tools.javac.util.Pair;
 
 import java.util.List;
@@ -77,4 +78,13 @@ public class StudentService implements StudentInterface {
         return studentDaoInterface.viewReportCard(studentId);
 
     }
+
+
+    public void studentRegistration(String studenntId, String password){
+
+        studentDaoInterface.studentRegistration(studenntId, password);
+
+
+    }
+
 }

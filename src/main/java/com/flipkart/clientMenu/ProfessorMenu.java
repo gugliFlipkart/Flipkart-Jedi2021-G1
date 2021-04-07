@@ -4,6 +4,7 @@ import com.flipkart.bean.Grade;
 import com.flipkart.bean.Student;
 import com.flipkart.handler.ProfessorHandler;
 import com.flipkart.service.ProfessorService;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 import java.util.Scanner;
@@ -19,6 +20,7 @@ public class ProfessorMenu {
 
     // crsapp -> menu ->handler-> service ->dao -> db
 
+    private static Logger logger = Logger.getLogger(ProfessorMenu.class);
     Scanner scanner = new Scanner(System.in);
     ProfessorHandler professorHandler = new ProfessorHandler();
 
@@ -51,10 +53,6 @@ public class ProfessorMenu {
                     logger.info("-----You're redirected to page where you can view list of Enrolled students!-----");
                     logger.info(" ");
                     logger.info("Enter Course ID to see enrolled Student");
-
-                case 2:  //view student
-
-                    System.out.println("Enter Course ID to see enrolled Student");
 
                     String courseIdd = scanner.next();
                     List<Student> courseStudentList = professorHandler.ViewStudents(courseIdd);

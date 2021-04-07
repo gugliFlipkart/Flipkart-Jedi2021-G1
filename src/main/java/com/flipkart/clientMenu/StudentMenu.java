@@ -11,6 +11,7 @@ import com.flipkart.handler.PaymentHandler;
 import com.flipkart.handler.ProfessorHandler;
 import com.flipkart.handler.StudentHandler;
 import com.flipkart.service.ProfessorService;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.Scanner;
 
 public class StudentMenu {
 
+    private static Logger logger = Logger.getLogger(StudentMenu.class);
     private String studentId;
     public StudentMenu(String studentId) {
         this.studentId = studentId;
@@ -159,6 +161,11 @@ public class StudentMenu {
        logger.info("select mode of Payment \n 1. Credit Card \n 2. Debit Card \n 3. Offline Payment");
         int mode = scanner.nextInt();
         studentHandler.payFee(student,mode);
+
+    }
+
+    public void studentRegistration(String userId, String password){
+
 
     }
 

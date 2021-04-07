@@ -8,6 +8,7 @@ import com.flipkart.exception.CourseCapacityReached;
 import com.flipkart.exception.CourseNotFoundException;
 import com.flipkart.exception.RequiredCourseAdditionException;
 import com.flipkart.handler.AuthenticationHandler;
+import com.flipkart.handler.StudentHandler;
 import jdk.internal.util.xml.impl.Pair;
 import org.apache.log4j.Logger;
 
@@ -50,16 +51,19 @@ public class CRSApplication {
         logger.info("  ");
 
 
-
         int userAction = scanner.nextInt();
+
 
         switch (userAction){
             case 1:
                 login();
+                break;
             case 2:
                 studentRegistration();
+                break;
             case 3:
                 updatePassword();
+                break;
             case 9:
                 logger.info("********  Logged out  **********");
                 break;
@@ -110,7 +114,7 @@ public class CRSApplication {
 
                         AdminMenu adminMenu = new AdminMenu();
 
-                        adminMenu.enterAdminDashboard();
+//                        adminMenu.enterAdminDashboard();
                         break;
 
 
@@ -136,7 +140,17 @@ public class CRSApplication {
     }
 
     public static void studentRegistration(){
+        logger.info("====enter Credentials=======");
+        String userId;
+        String password;
+        System.out.println("Enter UserId");
+        scanner.nextLine();
+        userId = scanner.nextLine();
+        System.out.println("Enter Password");
+        password = scanner.nextLine();
 
+        StudentHandler studentHandler = new StudentHandler();
+        studentHandler.studentRegistration(userId,password);
 
 
 
@@ -144,7 +158,19 @@ public class CRSApplication {
 
     public static void updatePassword(){
 
+        logger.info("====enter Credentials=======");
+        String userId;
 
+        System.out.println("Enter UserId");
+        scanner.nextLine();
+        userId = scanner.nextLine();
+        System.out.println("Enter OLD Password");
+        String oldPassword = scanner.nextLine();
+        System.out.println("Enter New Password");
+        String newPassword = scanner.nextLine();
+
+        StudentHandler studentHandler = new StudentHandler();
+//        studentHandler.studentRegistration(userId,oldPassword,newPassword);
 
     }
 

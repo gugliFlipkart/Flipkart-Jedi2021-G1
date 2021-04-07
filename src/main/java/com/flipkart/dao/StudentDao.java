@@ -291,5 +291,28 @@ public class StudentDao implements StudentDaoInterface {
 
 
     }
+
+    public void studentRegistration(String studentId, String password){
+
+        try {
+
+            // todo check if user already available
+            System.out.println("Creating statement...");
+            stmt = conn.prepareStatement(SqlQueries.REGISTER_STUDENT);
+            stmt.setString(1, studentId);
+            stmt.setString(2, password);
+            stmt.setString(3, "STUDENT");
+            stmt.setInt(4, 0);
+
+            System.out.println(stmt.executeUpdate());
+            logger.info("student registered -----");
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+    }
     
 }
