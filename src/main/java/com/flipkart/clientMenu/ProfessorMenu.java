@@ -28,13 +28,14 @@ public class ProfessorMenu {
 
     public void enterProfessorDashboard(String professorId){
 
+        logger.info(" ");
+        logger.info("*********************************    Successfully logged in      *********************************");
+        logger.info(" ");
 
         int flag = 0;
         while (true) {
 
-            logger.info(" ");
-            logger.info("*********************************    Successfully logged in      *********************************");
-            logger.info(" ");
+
             logger.info("--------------------------------------------------------------------------------------------------");
             logger.info("===================================  Welcome to Professor Menu    ===============================");
             logger.info("----------------------------------------------------------------------------------------------------");
@@ -48,6 +49,9 @@ public class ProfessorMenu {
                     logger.info("-----You're redirected to page where you can add Courses to teach!-----");
                     logger.info("        ");
                     logger.info("Enter courseId you would like to teach :");
+                    String courseId = scanner.next();
+                    professorHandler.addCoursesToTeach(professorId,courseId);
+                    break;
 
                 case 2:  //view student list
                     logger.info("-----You're redirected to page where you can view list of Enrolled students!-----");

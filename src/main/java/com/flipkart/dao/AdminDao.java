@@ -57,7 +57,7 @@ public class AdminDao implements AdminDaoInterface{
         try {
             ResultSet rs = null;
             stmt = conn.prepareStatement(SqlQueries.APPROVE_STUDENT_QUERY);
-
+            stmt.executeUpdate();
 
 
 
