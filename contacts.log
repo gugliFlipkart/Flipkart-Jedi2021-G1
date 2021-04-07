@@ -823,3 +823,5 @@ Enter code
  3. Delete a course from Course Catalogue 
  4. Generate Student Report card 
   9. Exit
+16:04:56,829  INFO AdminMenu,main:97 - ******* Logging Out! *********
+16:04:56,830  INFO CRSApplication,main:61 - ********  Logged out  **********

@@ -37,8 +37,8 @@ public class AdminService implements AdminServiceInterface {
 
 
     @Override
-    public void approveStudentRegistration(String studentId) {
-        adminDaoInterface.approveStudentRegistration(studentId);
+    public void approveStudentRegistration() {
+        adminDaoInterface.approveStudentRegistration();
 
 
     }

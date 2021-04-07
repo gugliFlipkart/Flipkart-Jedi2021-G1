@@ -50,10 +50,10 @@ public class AdminDao implements AdminDaoInterface{
 
     /**
      * Method to approve student registration by admin
-     * @param studentId
+     *
      */
     @Override
-    public void approveStudentRegistration(String studentId) {
+    public void approveStudentRegistration() {
         try {
             ResultSet rs = null;
             stmt = conn.prepareStatement(SqlQueries.APPROVE_STUDENT_QUERY);

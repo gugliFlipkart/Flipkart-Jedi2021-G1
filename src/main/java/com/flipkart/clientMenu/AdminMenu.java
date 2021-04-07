@@ -47,7 +47,7 @@ public class AdminMenu {
 
                     //logger.info("Enter the Student's ID");
                     //String studentId = scanner.next();
-                    adminHandler.approveStudentRegistration("studentId"); //Todo remove studentId as parameter
+                    adminHandler.approveStudentRegistration(); //Todo remove studentId as parameter
                     break;
 
 

@@ -20,8 +20,8 @@ public class AdminHandler {
     AdminServiceInterface adminService= AdminService.getInstance();
 
 
-    public void approveStudentRegistration(String studentId){
-        adminService.approveStudentRegistration(studentId);
+    public void approveStudentRegistration(){
+        adminService.approveStudentRegistration();
     }
 
     public void addCourses(Course course){

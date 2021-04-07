@@ -13,7 +13,7 @@ public interface AdminDaoInterface {
      *
      */
     //public List<Student> viewApprovalPendingRegistration();
-    public void approveStudentRegistration(String studentId);
+    public void approveStudentRegistration();
     public void addCourses(Course course);
     public void dropCourses(String courseId);
     public List<Grade> generateReportCard(String studentId);

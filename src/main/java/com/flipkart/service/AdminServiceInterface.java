@@ -14,7 +14,7 @@ public interface AdminServiceInterface {
 
 
    // public List<Student> viewApprovalPendingregistration();
-    public void approveStudentRegistration(String studentId);
+    public void approveStudentRegistration();
     public void addCourses(Course course);
     public void dropCourses(String courseId);
     public List<Grade> generateReportCard(String studentId);
