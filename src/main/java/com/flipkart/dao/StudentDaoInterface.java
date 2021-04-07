@@ -11,6 +11,11 @@ import java.util.List;
 
 public interface StudentDaoInterface {
 
+    /**
+     * Interface for Student Dao
+     * @return
+     */
+
     public List<Course> registerForSemester();
 //    public Pair<Boolean, List<String>> registerCourses(Student student);
     public boolean addCourse(String studentId, String courseId) throws RequiredCourseAdditionException, CourseCapacityReached, CourseAlreadyRegisteredException;

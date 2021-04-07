@@ -29,16 +29,27 @@ public class CRSApplication {
     }
 
 
+    /**
+     * Method used to display Welcome Screen
+     *
+     */
+
+
 
     public static void welcomeScreen(){
+        logger.info("  ");
+        logger.info("-------------------------------------------------------------------------------------------------");
+        logger.info("-------------------------------  Welcome to Course Management System  ---------------------------");
+        logger.info("-------------------------------------------------------------------------------------------------");
+        logger.info("   ");
+        logger.info("======================================  Enter your choice  ======================================");
+        logger.info("   ");
+        logger.info(" 1. Login ");
+        logger.info(" 2. Student Registration ");
+        logger.info(" 3. Update password ");
+        logger.info(" 9. Logout ");
+        logger.info("  ");
 
-        logger.info("----------Welcome to Course Management System---------");
-
-        logger.info("=========Enter action code as below=========");
-        logger.info("1 - Login");
-        logger.info("2 - Student Registration");
-//        logger.info("3 - Update password");
-        logger.info("9 - Exit");
 
         int userAction = scanner.nextInt();
 
@@ -54,7 +65,7 @@ public class CRSApplication {
                 updatePassword();
                 break;
             case 9:
-                logger.info("logging out");
+                logger.info("********  Logged out  **********");
                 break;
         }
 
@@ -62,6 +73,11 @@ public class CRSApplication {
 
     }
 
+
+    /**
+     *  Method which helps user login
+     *  and takes the user to their corresponding Menu
+     */
 
     public static void login() {
 
@@ -83,20 +99,22 @@ public class CRSApplication {
             if (userType != null) {
 
                 switch (userType) {
-                    case "STUDENT"://student
-//                    System.out.println(UserType.STUDENT);
-//                    Student student = (Student) user;
-//                    System.out.println("accessing student ========"+student.getStudentName());
+                    case "STUDENT":
                         StudentMenu studentMenu = new StudentMenu(userId);
                         studentMenu.enterStudentDashboard();
-
                         break;
                     case "PROFESSOR":
 
                         ProfessorMenu professorMenu = new ProfessorMenu();
-                        // enterring prof menu
+
                         professorMenu.enterProfessorDashboard(userId);
 
+                        break;
+                    case "ADMIN":
+
+                        AdminMenu adminMenu = new AdminMenu();
+
+//                        adminMenu.enterAdminDashboard();
                         break;
 
 
@@ -104,7 +122,8 @@ public class CRSApplication {
 
 
             } else {
-                System.out.println("invalid======");
+
+               logger.info("***************  Oops!  Invalid Credentials   ************** ");
             }
 
 

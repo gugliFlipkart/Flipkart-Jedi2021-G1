@@ -44,7 +44,12 @@ public class StudentDao implements StudentDaoInterface {
     }
 
 
-//    PreparedStatement stmt = null;
+    /**
+     * Method called when student registers for the semester
+     * @return course catalogue
+     */
+
+
 
     public List<Course> registerForSemester(){
 
@@ -53,7 +58,7 @@ public class StudentDao implements StudentDaoInterface {
         List<Course> courseList = new ArrayList<>();
 
         try {
-            System.out.println("Creating statement...");
+            ///System.out.println("Creating statement...");
             stmt = conn.prepareStatement(SqlQueries.GET_COURSE_LIST);
 
             ResultSet rs = stmt.executeQuery();
@@ -79,29 +84,12 @@ public class StudentDao implements StudentDaoInterface {
        return courseList;
     }
 
-/*
-    public Pair<Boolean, List<String>> registerCourses(Student student){
-        //check for no of courses
-        // return
-        List<String> li = new ArrayList<> (1);
-        li.add("c101");
-        li.add("c102");
-        li.add("c103");
 
-        Pair<Boolean, List<String>> ans = new Pair <Boolean, List<String>>(true,li) ;
-//        Pair<Integer,Integer > pair = new Pair<Integer,Integer>();
-
-
-
-        return ans;
-
-    }
-    */
 
     /**
-     *
+     * Method used to add the given course for the student
      * @param studentId, courseId
-     * @return
+     *
      * @throws RequiredCourseAdditionException
      * @throws CourseCapacityReached
      * @throws CourseAlreadyRegisteredException
@@ -123,7 +111,7 @@ public class StudentDao implements StudentDaoInterface {
 
         try {
             ResultSet rs = null;
-            System.out.println("Creating statement...");
+            //System.out.println("Creating statement...");
 
             stmt = conn.prepareStatement(SqlQueries.GET_HEADCOUNT_COURSE);
             stmt.setString(1,courseId);
@@ -160,12 +148,12 @@ public class StudentDao implements StudentDaoInterface {
                 //execute insert query
 
                 try {
-                    System.out.println("Adding Course...");
+                    logger.info("*****  Adding Course *****");
                     stmt = conn.prepareStatement(SqlQueries.ADD_COURSE);
                     stmt.setString(1,studentId);
                     stmt.setString(2,courseId);
 
-                    System.out.println(stmt.executeUpdate());
+                    logger.info(stmt.executeUpdate());
                 }
                 catch (SQLException throwables) {
                     throwables.printStackTrace();
@@ -194,7 +182,7 @@ public class StudentDao implements StudentDaoInterface {
     }
 
     /**
-     *
+     * Method used for dropping a given course for the student
      * @param studentId, courseId
      * @return
      * @throws CourseNotFoundException
@@ -214,21 +202,21 @@ public class StudentDao implements StudentDaoInterface {
             coursePresent = rs.getInt(1);
 
             if( coursePresent == 0) {
-                System.out.println("=================");
+
                 throw new CourseNotFoundException(courseId);
 
             }
             else{
                 //update query
                 try {
-                    logger.info("Dropping Course....");
-                    System.out.println("Droppingggggggg! ");
+                    logger.info("*****  Dropping Course  *****");
+
                     stmt = conn.prepareStatement(SqlQueries.DROP_COURSE);
                     stmt.setString(1,courseId);
                     stmt.setString(2,studentId);
 
 
-                    System.out.println(stmt.executeUpdate());
+                    logger.info(stmt.executeUpdate());
 
 
                 }
@@ -236,7 +224,7 @@ public class StudentDao implements StudentDaoInterface {
                     throwables.printStackTrace();
 
                 }
-                logger.info("Congrats ! Course Dropped !---");
+                logger.info("Congrats! Course Dropped!");
             }
 
         }
@@ -246,7 +234,7 @@ public class StudentDao implements StudentDaoInterface {
         }
 
 
-        System.out.println("return execute-----------");
+        //System.out.println("return execute-----------");
         return true;
 
 
@@ -254,6 +242,11 @@ public class StudentDao implements StudentDaoInterface {
 
     //no pay fee fn coz this doesnot interact with db directly
 
+    /**
+     * Method used to generate Student's Report Card
+     * @param studentId
+     * @return
+     */
 
     public List<Grade> viewReportCard(String studentId){
 
@@ -266,7 +259,7 @@ public class StudentDao implements StudentDaoInterface {
 
 
         try {
-            System.out.println("Creating statement...");
+            //logger.info("Creating statement...");
             stmt = conn.prepareStatement(SqlQueries.VIEW_GRADE);
             stmt.setString(1,studentId);
             ResultSet rs = stmt.executeQuery();

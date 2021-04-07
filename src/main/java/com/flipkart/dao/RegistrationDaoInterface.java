@@ -1,9 +1,7 @@
-package com.flipkart.service;
+package com.flipkart.dao;
 
 import java.sql.SQLException;
 
-public interface RegistrationInterface {
-
+public interface RegistrationDaoInterface {
     public double calculateFee(String studentId) throws SQLException;
-
 }

@@ -14,6 +14,9 @@ import com.sun.tools.javac.util.Pair;
 
 import java.util.List;
 
+/**
+ * Mathods of this class communicate with dao layer
+ */
 public class StudentService implements StudentInterface {
 
     /**

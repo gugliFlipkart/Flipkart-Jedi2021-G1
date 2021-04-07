@@ -11,6 +11,10 @@ import com.sun.tools.javac.util.Pair;
 
 import java.util.List;
 
+/**
+ * Interface for student service
+ */
+
 public interface StudentInterface {
 
 
