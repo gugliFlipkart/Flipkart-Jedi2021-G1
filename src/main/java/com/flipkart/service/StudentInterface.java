@@ -21,4 +21,5 @@ public interface StudentInterface {
     public void dropCourse(String student, String courseId) throws CourseNotFoundException;
     public boolean payFee(Student student, int mode);
     public void studentRegistration(String userId, String password);
+
 }

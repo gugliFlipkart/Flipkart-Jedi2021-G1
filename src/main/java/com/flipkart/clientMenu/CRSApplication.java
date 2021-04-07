@@ -37,18 +37,22 @@ public class CRSApplication {
         logger.info("=========Enter action code as below=========");
         logger.info("1 - Login");
         logger.info("2 - Student Registration");
-        logger.info("3 - Update password");
+//        logger.info("3 - Update password");
         logger.info("9 - Exit");
 
         int userAction = scanner.nextInt();
 
+
         switch (userAction){
             case 1:
                 login();
+                break;
             case 2:
                 studentRegistration();
+                break;
             case 3:
                 updatePassword();
+                break;
             case 9:
                 logger.info("logging out");
                 break;

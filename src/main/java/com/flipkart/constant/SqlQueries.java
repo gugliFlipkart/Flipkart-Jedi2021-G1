@@ -13,6 +13,7 @@ public class SqlQueries {
     public static final String DROP_COURSE = "delete from studentCourseRegistration where courseId = ? AND studentId = ?";
     public static final String VIEW_GRADE = "select course.courseId,course.courseName,studentGrade.grade from course inner join studentGrade on course.courseId = studentGrade.courseId where studentGrade.studentId = ?";
     //fetch Course added
+    public static final String REGISTER_STUDENT = "insert into userCredentials values (?,?,?,?)";
 
 
 
