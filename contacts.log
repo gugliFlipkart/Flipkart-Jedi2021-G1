@@ -368,3 +368,79 @@ Enter code
 13:52:26,067  INFO CRSApplication,main:38 - 2 - Student Registration
 13:52:26,067  INFO CRSApplication,main:39 - 3 - Update password
 13:52:26,067  INFO CRSApplication,main:40 - 9 - Exit
+16:38:06,114  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+16:38:06,119  INFO CRSApplication,main:36 - =========Enter action code as below=========
+16:38:06,119  INFO CRSApplication,main:37 - 1 - Login
+16:38:06,119  INFO CRSApplication,main:38 - 2 - Student Registration
+16:38:06,120  INFO CRSApplication,main:39 - 3 - Update password
+16:38:06,120  INFO CRSApplication,main:40 - 9 - Exit
+16:40:02,170  INFO CRSApplication,main:52 - logging out
+16:40:17,736  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+16:40:17,740  INFO CRSApplication,main:36 - =========Enter action code as below=========
+16:40:17,740  INFO CRSApplication,main:37 - 1 - Login
+16:40:17,740  INFO CRSApplication,main:38 - 2 - Student Registration
+16:40:17,740  INFO CRSApplication,main:39 - 3 - Update password
+16:40:17,740  INFO CRSApplication,main:40 - 9 - Exit
+20:43:42,731  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+20:43:42,733  INFO CRSApplication,main:36 - =========Enter action code as below=========
+20:43:42,733  INFO CRSApplication,main:37 - 1 - Login
+20:43:42,733  INFO CRSApplication,main:38 - 2 - Student Registration
+20:43:42,733  INFO CRSApplication,main:39 - 3 - Update password
+20:43:42,733  INFO CRSApplication,main:40 - 9 - Exit
+20:45:40,346  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+20:45:40,349  INFO CRSApplication,main:36 - =========Enter action code as below=========
+20:45:40,349  INFO CRSApplication,main:37 - 1 - Login
+20:45:40,349  INFO CRSApplication,main:38 - 2 - Student Registration
+20:45:40,349  INFO CRSApplication,main:39 - 3 - Update password
+20:45:40,349  INFO CRSApplication,main:40 - 9 - Exit
+20:45:57,022  INFO PaymentService,main:36 - Your total fee  = 180.0
+20:45:57,023  INFO PaymentService,main:37 - continue Fee Payment
+20:45:57,023  INFO PaymentService,main:39 - Select Mode of Payment:
+20:45:57,024  INFO PaymentService,main:43 - 1 CREDIT_CARD
+20:45:57,024  INFO PaymentService,main:43 - 2 NET_BANKING
+20:45:57,024  INFO PaymentService,main:43 - 3 DEBIT_CARD
+20:46:16,248  INFO PaymentService,main:60 - Payment Notification ---->> Notification{transactionID='5b158bde-cfb0-4b5b-9154-7e5edd5ed82d', studentId='ss', message='Successful', amount=180.0}
+20:54:00,532  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+20:54:00,534  INFO CRSApplication,main:36 - =========Enter action code as below=========
+20:54:00,534  INFO CRSApplication,main:37 - 1 - Login
+20:54:00,534  INFO CRSApplication,main:38 - 2 - Student Registration
+20:54:00,534  INFO CRSApplication,main:39 - 3 - Update password
+20:54:00,534  INFO CRSApplication,main:40 - 9 - Exit
+20:54:14,506  INFO PaymentService,main:36 - Your total fee  = 180.0
+20:54:14,507  INFO PaymentService,main:37 - continue Fee Payment
+20:54:14,507  INFO PaymentService,main:39 - Select Mode of Payment:
+20:54:14,508  INFO PaymentService,main:43 - 1 CREDIT_CARD
+20:54:14,508  INFO PaymentService,main:43 - 2 NET_BANKING
+20:54:14,508  INFO PaymentService,main:43 - 3 DEBIT_CARD
+20:54:17,330  INFO PaymentService,main:52 - <<---- Payment Done ---->> 
+20:54:17,340  INFO PaymentService,main:61 - Payment Notification ---->> Notification{transactionID='34f3e9d9-60ff-4d45-8c1d-623ec02560d4', studentId='ss', message='Successful', amount=180.0}
+20:55:10,780  INFO CRSApplication,main:52 - logging out
+21:19:45,477  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+21:19:45,479  INFO CRSApplication,main:36 - =========Enter action code as below=========
+21:19:45,479  INFO CRSApplication,main:37 - 1 - Login
+21:19:45,479  INFO CRSApplication,main:38 - 2 - Student Registration
+21:19:45,479  INFO CRSApplication,main:39 - 3 - Update password
+21:19:45,479  INFO CRSApplication,main:40 - 9 - Exit
+21:19:54,796  INFO PaymentService,main:36 - Your total fee  = 180.0
+21:19:54,796  INFO PaymentService,main:37 - continue Fee Payment
+21:19:54,796  INFO PaymentService,main:39 - Select Mode of Payment:
+21:19:54,798  INFO PaymentService,main:43 - 1 CREDIT_CARD
+21:19:54,798  INFO PaymentService,main:43 - 2 NET_BANKING
+21:19:54,798  INFO PaymentService,main:43 - 3 DEBIT_CARD
+21:19:59,392  INFO PaymentService,main:52 - <<---- Payment Done ---->> 
+21:19:59,412  INFO PaymentService,main:60 - Payment Notification ---->> Notification{transactionID='e54a79a0-8b49-44f3-a54b-520327ddea70', studentId='ss', message='Successful', amount=180.0}
+21:22:52,537  INFO CRSApplication,main:34 - ----------Welcome to Course Management System---------
+21:22:52,539  INFO CRSApplication,main:36 - =========Enter action code as below=========
+21:22:52,539  INFO CRSApplication,main:37 - 1 - Login
+21:22:52,539  INFO CRSApplication,main:38 - 2 - Student Registration
+21:22:52,539  INFO CRSApplication,main:39 - 3 - Update password
+21:22:52,539  INFO CRSApplication,main:40 - 9 - Exit
+21:23:01,034  INFO PaymentService,main:36 - Your total fee  = 180.0
+21:23:01,035  INFO PaymentService,main:37 - continue Fee Payment
+21:23:01,035  INFO PaymentService,main:39 - Select Mode of Payment:
+21:23:01,036  INFO PaymentService,main:43 - 1 CREDIT_CARD
+21:23:01,036  INFO PaymentService,main:43 - 2 NET_BANKING
+21:23:01,036  INFO PaymentService,main:43 - 3 DEBIT_CARD
+21:23:02,856  INFO PaymentService,main:52 - <<---- Payment Done ---->> 
+21:23:02,874  INFO PaymentService,main:60 - Payment Notification ---->> Notification{transactionID='a15d5c53-08a3-4a3f-b637-81fbb7510a78', studentId='ss', message='Successful', amount=180.0}
+21:23:10,662  INFO CRSApplication,main:52 - logging out
