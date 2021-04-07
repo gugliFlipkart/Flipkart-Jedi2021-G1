@@ -7,6 +7,10 @@ import com.flipkart.service.ProfessorService;
 
 import java.util.List;
 
+/**
+ * handler class for professor
+ */
+
 public class ProfessorHandler {
 
     ProfessorInterface professorService = ProfessorService.getInstance();

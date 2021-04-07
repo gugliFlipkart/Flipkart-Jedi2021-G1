@@ -42,13 +42,21 @@ public class StudentMenu {
 
         int flag = 0;
         while (true) {
-            logger.info("--------Successfully logged in---------");
-            logger.info("===========Welcome to Student Menu============");
-            logger.info(" 1. Register For Semester \n 2. Pay fee \n 3. View Grades-- 3 \n 9.exit");
+            logger.info("                                                                                                  ");
+            logger.info("*********************************    Successfully logged in      *********************************");
+            logger.info("                                                                                                  ");
+            logger.info("--------------------------------------------------------------------------------------------------");
+            logger.info("===================================  Welcome to Student Menu    ===============================");
+            logger.info("----------------------------------------------------------------------------------------------------");
+            logger.info("                                                                                                      ");
+            logger.info("Enter your choice: ");
+            logger.info("                                                                                                      ");
+
+            logger.info(" 1. Register For Semester \n 2. Pay fee \n 3. View Grades \n 9.exit");
 
             switch (scanner.nextInt()) {
                 case 1: //registerforSemester
-                    logger.info("----------Registration-----------");
+                    logger.info("-------------------    Student Registration    -------------------");
 //                String studentId = scanner.next();
                     List<Course> courselist = studentHandler.registerForSemester(); //Todo response = list of course
 
@@ -59,14 +67,10 @@ public class StudentMenu {
 
                     break;
 
-//                case 2://register courses // checks if no of course added is 6 (4 primary and 2 alter)
 
-//                    studentHandler.registerCourses(userId);
-
-//                    break;
 
                 case 2: // pay fee
-                    logger.info("--------Fee Payment Portal---------");
+                    logger.info("--------------------    Fee Payment Portal     -----------------------");
                     // check for succefull registration of courses
 //                    boolean courseRegistrationStatus = studentHandler.registerCourses(student).fst;
 //
@@ -78,7 +82,7 @@ public class StudentMenu {
                     break;
 
                 case 3:// view Grade Card
-                    logger.info("--------Grade Card---------");
+                    logger.info("-------------------     Grade Card           -------------------------");
                     List<Grade> gradelist = studentHandler.viewReportCard(studentId);
 
                     for(Grade grade : gradelist)
@@ -92,7 +96,7 @@ public class StudentMenu {
 
             }
             if(flag == 1) {
-                System.out.println("---------User logged out-----------");
+                logger.info ("********** User logged out **********");
                 break;
             }
 
@@ -113,23 +117,24 @@ public class StudentMenu {
 
 //        int input = scanner.nextInt();
         int flag =0;
-        System.out.println("enter 4 primary and 2 alter course");
+        logger.info("Enter 4 primary and 2 alternate Courses");
 
         while(true) {
-            System.out.println("enter\n add course--> 1 \n drop course --> 2 \n exit--> 9");
+            logger.info("Enter you choice : ");
+            logger.info("1. Add course \n 2. Drop course --> 2 \n 9. Exit" );
 
             //can put condition
             switch (scanner.nextInt()) {
                 case 1://add
 
 //                addCourseList.add(scanner.next());
-                    System.out.println("Enter CourseID to Add");
+                    logger.info("Enter CourseID of the Course you wish to Add");
                     String courseIdAdd = scanner.next();
                     studentHandler.addCourse(studentId,courseIdAdd);//sends 1 course at a time
                     break;
 
                 case 2://drop
-                    System.out.println("Enter CourseID to Drop");
+                    logger.info("Enter CourseID of the Course you wish to Drop");
                     String courseIdDrop = scanner.next();
                     studentHandler.dropCourse(studentId,courseIdDrop);//
                     break;
@@ -140,7 +145,7 @@ public class StudentMenu {
                 }
 
             if(flag == 1) {
-                System.out.println("exiting add drop page");
+                logger.info("******  Exiting the add drop page  *******");
                 break;
             }
 
@@ -157,7 +162,7 @@ public class StudentMenu {
         //online (credit )offline
         //Todo check for payment staus in db
 
-        System.out.println("select mode of Payemnt \n cc-- 1\n db---2\n offline --3");
+       logger.info("select mode of Payment \n 1. Credit Card \n 2. Debit Card \n 3. Offline Payment");
         int mode = scanner.nextInt();
         studentHandler.payFee(student,mode);
 

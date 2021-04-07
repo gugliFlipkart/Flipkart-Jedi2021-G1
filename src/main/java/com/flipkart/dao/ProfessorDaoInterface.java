@@ -7,6 +7,10 @@ import java.util.List;
 
 public interface ProfessorDaoInterface  {
 
+    /**
+     * Interface for professor dao
+     * @param grade
+     */
 
     public void addGrades(Grade grade);
     public List<Student> fetchEnrolledStudent(String courseId);
