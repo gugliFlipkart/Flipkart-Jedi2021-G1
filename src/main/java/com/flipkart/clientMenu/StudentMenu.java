@@ -11,6 +11,7 @@ import com.flipkart.handler.PaymentHandler;
 import com.flipkart.handler.ProfessorHandler;
 import com.flipkart.handler.StudentHandler;
 import com.flipkart.service.ProfessorService;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.Scanner;
 
 public class StudentMenu {
 
+    private static Logger logger = Logger.getLogger(StudentMenu.class);
     private String studentId;
     public StudentMenu(String studentId) {
         this.studentId = studentId;

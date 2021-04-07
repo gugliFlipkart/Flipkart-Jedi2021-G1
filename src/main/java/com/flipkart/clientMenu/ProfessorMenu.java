@@ -20,7 +20,7 @@ public class ProfessorMenu {
 
     // crsapp -> menu ->handler-> service ->dao -> db
 
-    private static Logger logger = Logger.getLogger(CRSApplication.class);
+    private static Logger logger = Logger.getLogger(ProfessorMenu.class);
     Scanner scanner = new Scanner(System.in);
     ProfessorHandler professorHandler = new ProfessorHandler();
 
