@@ -75,14 +75,19 @@ public class StudentMenu {
 //                    else
 //                        System.out.println("u have not com[leted course registration! Duffer !");
 
+//                    PaymentHandler paymentHandler = new PaymentHandler();
+                    PaymentHandler paymentHandler = new PaymentHandler();
+                    paymentHandler.make_payment(studentId);
+
                     break;
 
                 case 3:// view Grade Card
                     logger.info("-------------------     Grade Card           -------------------------");
+                    List<Grade> gradeList = studentHandler.viewReportCard(studentId);
 
+                    for(Grade grade : gradeList)
+                        System.out.println(grade.toString());
 
-                    PaymentHandler paymentHandler = new PaymentHandler();
-                    paymentHandler.make_payment(studentId);
 
                     break;
 

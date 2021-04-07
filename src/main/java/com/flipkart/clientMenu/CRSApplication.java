@@ -114,7 +114,7 @@ public class CRSApplication {
 
                         AdminMenu adminMenu = new AdminMenu();
 
-//                        adminMenu.enterAdminDashboard();
+                        adminMenu.enterAdminDashboard();
                         break;
 
 

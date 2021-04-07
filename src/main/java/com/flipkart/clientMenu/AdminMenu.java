@@ -40,7 +40,7 @@ public class AdminMenu {
             logger.info("--------------------------------------------------------------------------");
             logger.info(" ");
             logger.info("Enter your choice");
-            logger.info("1. Approve Student Registration \n 2. Add Course in Course Catalogue \n 3. Delete a course from Course Catalogue \n 4. Generate Student Report card \n  9. Exit");
+            logger.info("1. Approve Student Registration \n 2. Add Course in Course Catalogue \n 3. Delete a course from Course Catalogue \n 4. Generate Student Report card \n 9. Exit");
 
             switch (scanner.nextInt()) {
 
@@ -74,7 +74,7 @@ public class AdminMenu {
                     adminHandler.dropCourses(courseIdd);
                     break;
 
-                case 4:
+                case 4://generate report card
                     logger.info("Enter student ID: ");
                     String studentId = scanner.next();
                     List<Grade> gradeList = adminHandler.generateReportCard(studentId);
