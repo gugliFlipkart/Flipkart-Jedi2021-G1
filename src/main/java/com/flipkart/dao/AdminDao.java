@@ -168,39 +168,39 @@ public class AdminDao implements AdminDaoInterface{
     public List<Grade> generateReportCard(String studentId) {
 
 
-        List<Grade> gradeList = new ArrayList<>();
+
+            List<Grade> gradeList = new ArrayList<>();
 
 
+            try {
+                System.out.println("Creating statement...");
+                stmt = conn.prepareStatement(SqlQueries.VIEW_GRADE);
+                stmt.setString(1, studentId);
+                ResultSet rs = stmt.executeQuery();
 
-        try {
-            System.out.println("Creating statement...");
-            stmt = conn.prepareStatement(SqlQueries.VIEW_GRADE);
-            stmt.setString(1,studentId);
-            ResultSet rs = stmt.executeQuery();
+
+                while (rs.next()) {
+                    String courseId = rs.getString("courseId");
+                    String courseName = rs.getString("courseName");
+                    String gradeObtained = rs.getString("grade");
+
+                    Grade grade = new Grade();
+                    grade.setCourseId(courseId);
+                    grade.setCourseName(courseName);
+                    grade.setGradeObtained(gradeObtained);
+
+                    gradeList.add(grade);
 
 
-            while(rs.next()){
-                String courseId = rs.getString("courseId");
-                String courseName = rs.getString("courseName");
-                String gradeObtained = rs.getString("grade");
+                }
 
-                Grade grade = new Grade();
-                grade.setCourseId(courseId);
-                grade.setCourseName(courseName);
-                grade.setGradeObtained(gradeObtained);
-
-                gradeList.add(grade);
-
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
 
             }
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            return gradeList;
 
         }
 
-        return gradeList;
-
-
-    }
 }

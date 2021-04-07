@@ -34,6 +34,7 @@ public class CRSApplication {
      */
 
 
+
     public static void welcomeScreen(){
         logger.info("  ");
         logger.info("-------------------------------------------------------------------------------------------------");
@@ -47,6 +48,8 @@ public class CRSApplication {
         logger.info(" 3. Update password ");
         logger.info(" 9. Logout ");
         logger.info("  ");
+
+
 
         int userAction = scanner.nextInt();
 
@@ -66,6 +69,7 @@ public class CRSApplication {
 
     }
 
+
     /**
      *  Method which helps user login
      *  and takes the user to their corresponding Menu
@@ -75,10 +79,10 @@ public class CRSApplication {
 
         String userId;
         String password;
-        logger.info("Enter UserId");
+        System.out.println("Enter UserId");
         scanner.nextLine();
         userId = scanner.nextLine();
-        logger.info("Enter Password");
+        System.out.println("Enter Password");
         password = scanner.nextLine();
 
 
@@ -114,6 +118,7 @@ public class CRSApplication {
 
 
             } else {
+
                logger.info("***************  Oops!  Invalid Credentials   ************** ");
             }
 

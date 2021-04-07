@@ -17,6 +17,9 @@ public class SqlQueries {
     public static final String ADD_COURSE ="insert into studentCourseRegistration (studentId,courseId) values ( ? , ? )";
     public static final String DROP_COURSE = "delete from studentCourseRegistration where courseId = ? AND studentId = ?";
     public static final String VIEW_GRADE = "select course.courseId,course.courseName,studentGrade.grade from course inner join studentGrade on course.courseId = studentGrade.courseId where studentGrade.studentId = ?";
+    public static final String CALCULATE_FEES  = "select sum(courseFee) from course where courseId in (select courseId from studentCourseRegistration where studentId = ?);";
+    public static final String INSERT_PAYMENT = "insert into payment(studentId,modeofPayment,amt) values(?,?,?);";
+    public static final String INSERT_NOTIFICATION = "insert into notification(transactionId,studentId,message,amount) values(?,?,?,?);";
     //fetch Course added
 
 

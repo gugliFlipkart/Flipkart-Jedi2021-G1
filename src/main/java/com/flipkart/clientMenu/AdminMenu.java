@@ -1,5 +1,6 @@
 package com.flipkart.clientMenu;
 
+
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Grade;
 import com.flipkart.bean.Student;
@@ -47,7 +48,7 @@ public class AdminMenu {
 
                     //logger.info("Enter the Student's ID");
                     //String studentId = scanner.next();
-                    adminHandler.approveStudentRegistration(); //Todo remove studentId as parameter
+                    adminHandler.approveStudentRegistration("studentId"); //Todo remove studentId as parameter
                     break;
 
 
@@ -102,6 +103,4 @@ public class AdminMenu {
     }
 }
 
-
-
-
+}
